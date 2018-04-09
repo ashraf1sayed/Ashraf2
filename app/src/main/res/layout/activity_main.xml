@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#8D6E63"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Name of the book to search"
+        android:inputType="text"
+        android:background="#FAFAFA" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search_black_24dp"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignRight="@+id/listView"
+        android:layout_alignEnd="@+id/listView"
+        android:paddingRight="@dimen/activity_horizontal_margin" />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_found"
+        android:text="NoDataFound"
+        android:layout_below="@+id/editText"
+        tools:visibility="visible"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/no_found">
+    </ListView>
+</LinearLayout>
